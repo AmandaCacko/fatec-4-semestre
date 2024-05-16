@@ -1,10 +1,26 @@
-.label {
-    color: red;
-    display: flex;
-    align-items: flex-start;
+.container {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
+.input {
+  width: 575px;
+  height: 40px;
+  border: 2px solid #aaa;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+  outline: none;
+  margin-bottom: 6px;
+}
+
+.input:focus {
+  border-color: #376b00;
+}
+
+.label {
+  margin-bottom: 5px;
+  font-size: 18px;
+  text-align: left; 
 }

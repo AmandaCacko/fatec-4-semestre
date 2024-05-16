@@ -1,22 +1,19 @@
-import Sidebar from "../sidebar"
-import { Grid, GridItem } from "@chakra-ui/react"
+import Sidebar from "../sidebar";
+import { Box, Flex } from "@chakra-ui/react";
+import { ReactNode } from "react";
 
-interface Props {
-    children: React.ReactNode
+interface LayoutProps {
+    children: ReactNode;
 }
 
-function Layout(props: Props) {
-    const { children } = props
+function Layout({ children }: LayoutProps) {
     return (
-        <Grid className='grid' templateColumns='1fr' templateRows='64px auto 64px'>
-            <GridItem colSpan={1} rowSpan={1}>
-                <Sidebar children={undefined} />
-            </GridItem>
-            <GridItem colSpan={1} rowSpan={1}>
+        <Sidebar>
+            <Flex flex="1" flexDirection="column">
                 {children}
-            </GridItem>
-        </Grid>
-    )
+            </Flex>
+        </Sidebar>
+    );
 }
 
-export default Layout
+export default Layout;

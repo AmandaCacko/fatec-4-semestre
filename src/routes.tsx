@@ -1,4 +1,5 @@
 import { createBrowserRouter } from 'react-router-dom'
+import Login from './pages/login'
 import Home from './pages/home'
 import Sobre from './pages/sobre'
 import NotFound from './pages/404'
@@ -11,7 +12,9 @@ const router = createBrowserRouter([
   {path: '/sobre', element: <Sobre />},
   {path: '/tarefas', element: <Tarefas />},
   {path: '/formulario', element: <Formulario />},
-  {path: '/codigo', element: <Codigo />}
+  {path: '/formulario', element: <Formulario />},
+  {path: '/codigo', element: <Codigo />},
+  {path: '/login', element: <Login />}
 ])
 
 export default router

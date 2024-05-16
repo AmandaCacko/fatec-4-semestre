@@ -1,0 +1,25 @@
+.inputContainer {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .input {
+    width: 575px;
+    height: 40px;
+    border: 2px solid #aaa; /* Cor da borda padrão */
+    border-radius: 5px; /* Bordas arredondadas */
+    padding: 10px; /* Espaçamento interno */
+    font-size: 16px; /* Tamanho da fonte */
+    outline: none; /* Remove a borda de foco padrão */
+    margin-bottom: 6px; /* Espaçamento entre os inputs */
+  }
+  
+  .input:focus {
+    border-color: #376b00; /* Cor da borda ao receber foco */
+  }
+  
+  .label {
+    margin-bottom: 5px;
+    font-size: 18px;
+  }

@@ -1,9 +1,10 @@
+import CardLoginTemporario from "../../components/card-login-temporario";
 import Layout from "../../components/layout";
 
 function CriarCodigo() {
     return (
         <Layout>
-            <h1 style={{ textAlign: "center" }}>Exemplo</h1>
+            <CardLoginTemporario></CardLoginTemporario>
         </Layout>
     );
 }

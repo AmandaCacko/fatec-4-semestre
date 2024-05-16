@@ -1,5 +1,5 @@
 import React from "react";
-import Input from "../input-login"; // Ajuste o caminho conforme necessário
+import Input from "../input-login";
 import styles from "./index.module.css";
 import logo from "../../assets/JD-green-logo.svg";
 

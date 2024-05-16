@@ -1,5 +1,4 @@
-import Topo from "../../components/topo"
-import Rodape from "../../components/rodape"
+import Sidebar from "../sidebar"
 import { Grid, GridItem } from "@chakra-ui/react"
 
 interface Props {
@@ -11,13 +10,10 @@ function Layout(props: Props) {
     return (
         <Grid className='grid' templateColumns='1fr' templateRows='64px auto 64px'>
             <GridItem colSpan={1} rowSpan={1}>
-                <Topo />
+                <Sidebar children={undefined} />
             </GridItem>
             <GridItem colSpan={1} rowSpan={1}>
                 {children}
-            </GridItem>
-            <GridItem colSpan={1} rowSpan={1}>
-                <Rodape />
             </GridItem>
         </Grid>
     )

@@ -6,7 +6,7 @@ import { Flex } from "@chakra-ui/react"
 function Home() {
     return (
         <Layout>
-           <Flex marginLeft='350px'flexDirection={"row"}>
+           <Flex>
             <><Card></Card><Card></Card><Card></Card></>
         </Flex>
         </Layout>

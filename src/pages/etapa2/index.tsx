@@ -1,12 +1,12 @@
 import Layout from "../../components/layout"
-import AtribuirEtapas from "../../components/etapa1"
+import InserirCodigo from "../../components/etapa2"
 
 //<img src=""/>
 
 function Etapa2() {
     return (
         <Layout>
-            <AtribuirEtapas></AtribuirEtapas>
+            <InserirCodigo></InserirCodigo>
         </Layout>
     )
 }

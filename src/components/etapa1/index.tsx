@@ -64,7 +64,7 @@ function AtribuirEtapas() {
                                 boxShadow: 'lg',
                             }}
                             marginLeft='20px'>
-                            Buscarr
+                            Buscar
                         </Button>
                 </Flex>
                     <Flex flexDirection={"row"}>

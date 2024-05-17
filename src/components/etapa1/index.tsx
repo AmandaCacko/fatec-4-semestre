@@ -51,21 +51,21 @@ function AtribuirEtapas() {
                 <Flex flexDirection={"row"}>
                     <FormControl isRequired>                       
                         <InputGroup>
-                         <Input htmlSize={35} type="text" name="name" />
+                         <Input htmlSize={35} type="text" name="name" width={'650px'} />
                         </InputGroup> 
                     </FormControl>
-                    <Button 
-                        colorScheme="blue"
-                        bg="#377C2B"
-                        color="white"
-                        width={350}
-                        _hover={{
-                            bg: '#F6E05E',
-                        }}
-                        marginLeft='50px'
-                        >
-                        Buscar
-                    </Button>
+                    <Button
+                            w={'auto'}
+                            bg={useColorModeValue('#377C2B', 'green.900')}
+                            color={'white'}
+                            rounded={'md'}
+                            _hover={{
+                                transform: 'translateY(-2px)',
+                                boxShadow: 'lg',
+                            }}
+                            marginLeft='20px'>
+                            Buscarr
+                        </Button>
                 </Flex>
                     <Flex flexDirection={"row"}>
                     <Flex flexDirection={'row'} padding={100}>
@@ -215,17 +215,18 @@ function AtribuirEtapas() {
             </Flex>
                     </Flex>
                     
-                    <Button 
-                        colorScheme="blue"
-                        bg="#377C2B"
-                        color="white"
-                        width={350}
-                        _hover={{
-                            bg: '#377C2B',
-                        }}
-                        >
-                        Atualizar
-                    </Button>
+                    <Button
+                            w={'800px'}
+                            mt={8}
+                            bg={useColorModeValue('#377C2B', 'green.900')}
+                            color={'white'}
+                            rounded={'md'}
+                            _hover={{
+                                transform: 'translateY(-2px)',
+                                boxShadow: 'lg',
+                            }}>
+                            Atualizar
+                        </Button>
                 </VStack>
             </Box>
         </Flex>

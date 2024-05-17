@@ -1,9 +1,9 @@
 import Layout from "../../components/layout"
-import AtribuirEtapas from "../../components/etapas"
+import AtribuirEtapas from "../../components/etapa1"
 
 //<img src=""/>
 
-function Etapas() {
+function Etapa2() {
     return (
         <Layout>
             <AtribuirEtapas></AtribuirEtapas>
@@ -11,4 +11,4 @@ function Etapas() {
     )
 }
 
-export default Etapas
+export default Etapa2

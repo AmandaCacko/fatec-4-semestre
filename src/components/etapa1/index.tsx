@@ -22,13 +22,22 @@ import {
     useClipboard,
     useColorModeValue,
     VStack,
+    Checkbox,
 
 } from '@chakra-ui/react';
-
+import React, { useState } from 'react';
+import { ArrowForwardIcon } from '@chakra-ui/icons'
 
 function AtribuirEtapas() {
 
-    
+    const [isFormAccessible, setIsFormAccessible] = useState(false);
+    const [searchPerformed, setSearchPerformed] = useState(false);
+
+    const handleSearch = () => {
+        // Perform search logic here
+        setSearchPerformed(true);
+        setIsFormAccessible(true);
+      };
     
     return (
         <Flex padding={100}
@@ -63,7 +72,8 @@ function AtribuirEtapas() {
                                 transform: 'translateY(-2px)',
                                 boxShadow: 'lg',
                             }}
-                            marginLeft='20px'>
+                            marginLeft='20px'
+                            onClick={handleSearch}>
                             Buscar
                         </Button>
                 </Flex>
@@ -73,12 +83,14 @@ function AtribuirEtapas() {
                     maxW={'270px'}
                     w={'full'}
                     bg={useColorModeValue('white', 'gray.800')}
-                    borderWidth="1px" 
-                    borderStyle="solid" 
+                    borderWidth="1px"
+                    borderStyle="solid"
                     borderColor="#ffe01a"
                     boxShadow={'2xl'}
                     rounded={'24'}
-                    overflow={'hidden'}>
+                    overflow={'hidden'}
+                    opacity={isFormAccessible ? 1 : 0.5}
+                    pointerEvents={isFormAccessible ? 'auto' : 'none'}>
 
                     <Box p={6}>
                         <Stack spacing={0} align={'center'} mb={5}>
@@ -158,12 +170,14 @@ function AtribuirEtapas() {
                     maxW={'270px'}
                     w={'full'}
                     bg={useColorModeValue('white', 'gray.800')}
-                    borderWidth="1px" 
-                    borderStyle="solid" 
+                    borderWidth="1px"
+                    borderStyle="solid"
                     borderColor="#ffe01a"
                     boxShadow={'2xl'}
                     rounded={'24'}
-                    overflow={'hidden'}>
+                    overflow={'hidden'}
+                    opacity={isFormAccessible ? 1 : 0.5}
+                    pointerEvents={isFormAccessible ? 'auto' : 'none'}>
 
                     <Box p={6}>
                         <Stack spacing={0} align={'center'} mb={5}>
@@ -174,6 +188,7 @@ function AtribuirEtapas() {
 
                         <Stack spacing={0} align={'center'} mb={5}>
                         <Button
+                        rightIcon={<ArrowForwardIcon />}
                             w={'full'}
                             mt={8}
                             bg={useColorModeValue('#377C2B', 'green.900')}
@@ -182,8 +197,9 @@ function AtribuirEtapas() {
                             _hover={{
                                 transform: 'translateY(-2px)',
                                 boxShadow: 'lg',
-                            }}>
-                            Contro de distribuição →
+                            }}
+                            >
+                            Contro de distribuição
                         </Button>
                         </Stack>
 
@@ -197,8 +213,9 @@ function AtribuirEtapas() {
                             _hover={{
                                 transform: 'translateY(-2px)',
                                 boxShadow: 'lg',
-                            }}>
-                            Concessionária →
+                            }}
+                            rightIcon={<ArrowForwardIcon />}>
+                            Concessionária
                         </Button>
                         </Stack>
 
@@ -212,8 +229,9 @@ function AtribuirEtapas() {
                             _hover={{
                                 transform: 'translateY(-2px)',
                                 boxShadow: 'lg',
-                            }}>
-                            Cliente →
+                            }}
+                            rightIcon={<ArrowForwardIcon />}>
+                            Cliente
                         </Button>
                         </Stack>
                     </Box>
@@ -230,7 +248,9 @@ function AtribuirEtapas() {
                             _hover={{
                                 transform: 'translateY(-2px)',
                                 boxShadow: 'lg',
-                            }}>
+                            }}
+                            opacity={isFormAccessible ? 1 : 0.5}
+                            >
                             Atualizar
                         </Button>
                 </VStack>

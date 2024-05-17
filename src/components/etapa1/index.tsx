@@ -68,11 +68,14 @@ function AtribuirEtapas() {
                         </Button>
                 </Flex>
                     <Flex flexDirection={"row"}>
-                    <Flex flexDirection={'row'} padding={100}>
+                    <Flex flexDirection={'row'} padding={10}>
                 <Box
                     maxW={'270px'}
                     w={'full'}
                     bg={useColorModeValue('white', 'gray.800')}
+                    borderWidth="1px" 
+                    borderStyle="solid" 
+                    borderColor="#ffe01a"
                     boxShadow={'2xl'}
                     rounded={'24'}
                     overflow={'hidden'}>
@@ -80,47 +83,47 @@ function AtribuirEtapas() {
                     <Box p={6}>
                         <Stack spacing={0} align={'center'} mb={5}>
                             <Heading fontSize={'2xl'} fontWeight={500} fontFamily={'body'}>
-                                Quantidade vantagens
+                                Quantidade de viagens
                             </Heading>
                         </Stack>
                         
-                        <Stack spacing={0} align={'center'} mb={5}>
+                        <Stack spacing={0} align={'left'} mb={5}>
                         <Flex flexDirection={"row"}>
-                        <NumberInput>
+                        <NumberInput w={'120px'}>
                             <NumberInputField />
                             <NumberInputStepper>
                             <NumberIncrementStepper />
                             <NumberDecrementStepper />
                             </NumberInputStepper>
                         </NumberInput>
-                            <Text color={'gray.500'} marginLeft='10px' height='5px'>Centro de distribuição</Text>
+                            <Text color={'gray.500'} marginLeft='10px' height='5px' marginTop='5px'>Centro de distribuição</Text>
                             </Flex>
                         </Stack>
                         
 
-                        <Stack spacing={0} align={'center'} mb={5}>
+                        <Stack spacing={0} align={'left'} mb={5}>
                         <Flex flexDirection={"row"}>
-                        <NumberInput>
+                        <NumberInput w={'90px'}>
                             <NumberInputField />
                             <NumberInputStepper>
                             <NumberIncrementStepper />
                             <NumberDecrementStepper />
                             </NumberInputStepper>
                         </NumberInput>
-                            <Text color={'gray.500'} marginLeft='10px' height='5px'>Concessionária</Text>
+                            <Text color={'gray.500'} marginLeft='10px' height='5px' marginTop='5px'>Concessionária</Text>
                         </Flex>
                         </Stack>
 
-                        <Stack spacing={0} align={'center'} mb={5}>
+                        <Stack spacing={0} align={'left'} mb={5}>
                         <Flex flexDirection={"row"}>
-                        <NumberInput>
+                        <NumberInput w={'90px'} >
                             <NumberInputField />
                             <NumberInputStepper>
                             <NumberIncrementStepper />
                             <NumberDecrementStepper />
                             </NumberInputStepper>
                         </NumberInput>
-                            <Text color={'gray.500'} marginLeft='10px' height='5px'>Cliente</Text>
+                            <Text color={'gray.500'} marginLeft='10px' height='5px' marginTop='5px'>Cliente</Text>
                         </Flex>
                         </Stack>
                         <Stack spacing={0} align={'center'} mb={5}>
@@ -150,11 +153,14 @@ function AtribuirEtapas() {
                     </Box>
                 </Box>
             </Flex>
-            <Flex flexDirection={'row'} padding={100} width={'auto'}>
+            <Flex flexDirection={'row'} padding={10} width={'auto'}>
                 <Box
                     maxW={'270px'}
                     w={'full'}
                     bg={useColorModeValue('white', 'gray.800')}
+                    borderWidth="1px" 
+                    borderStyle="solid" 
+                    borderColor="#ffe01a"
                     boxShadow={'2xl'}
                     rounded={'24'}
                     overflow={'hidden'}>

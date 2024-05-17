@@ -25,6 +25,7 @@ import {
     Checkbox,
 
 } from '@chakra-ui/react';
+import { ArrowBackIcon } from '@chakra-ui/icons'
 
 
 function InserirCodigo() {
@@ -42,12 +43,21 @@ function InserirCodigo() {
             <Box
                 bg={useColorModeValue('white', 'gray.700')}
                 borderRadius="lg"
-                p={5}
+                p={10}
                 color={useColorModeValue('gray.700', 'whiteAlpha.900')}
                 shadow="base">
-                <VStack spacing={5}>
-                <Heading fontSize={'2xl'} fontWeight={500} fontFamily={'body'} textAlign={'left'}>
-                    ← Centro de distribuição 
+                <VStack spacing={0} >
+                
+                <Heading fontSize={'2xl'} fontWeight={500} fontFamily={'body'} marginBottom={'50px'}  textAlign={'left'}>
+                <IconButton
+                variant='outline'
+                colorScheme='#00000'
+                aria-label='Call Sage'
+                fontSize={'2xl'}
+                marginRight={'10px'}
+                icon={<ArrowBackIcon />}
+/>
+                    Centro de distribuição 
                 </Heading>
                 <Flex flexDirection={"row"}>
                     <FormControl isRequired>                       
@@ -70,24 +80,47 @@ function InserirCodigo() {
                         </Button>
                 </Flex>
 
-                <Flex flexDirection={'row'} padding={100} width={'500px'}>
+                <Flex flexDirection={'row'} padding={'50px'} width={'850px'} height={'500px'} >
                 <Box
-                    maxW={'270px'}
+                    maxW={'1000'}
                     w={'full'}
                     bg={useColorModeValue('white', 'gray.800')}
+                    borderWidth="1px" 
+                    borderStyle="solid" 
+                    borderColor="#ffe01a"
                     boxShadow={'2xl'}
                     rounded={'24'}
                     overflow={'hidden'}>
 
-                    <Box p={6}>
+                    <Box p={10}>
 
                         <Stack spacing={0} align={'center'} mb={5}>
-                        <Checkbox colorScheme='green' defaultChecked>
+                        <Checkbox colorScheme='green' 
+                         maxW={'1000px'}
+                         w={'full'}
+                         bg={useColorModeValue('white', 'gray.800')}
+                         borderWidth="1px" 
+                         borderStyle="solid" 
+                         borderColor="#979797"
+                         boxShadow={'1xl'}
+                         rounded={'md'}
+                         overflow={'hidden'}
+                         padding={1.5}>
                             Fora do caminhão
                         </Checkbox>
                         </Stack>
                         <Stack spacing={0} align={'center'} mb={5}>
-                        <Checkbox colorScheme='green' defaultChecked>
+                        <Checkbox colorScheme='green' 
+                        maxW={'1000px'}
+                        w={'full'}
+                        bg={useColorModeValue('white', 'gray.800')}
+                        borderWidth="1px" 
+                        borderStyle="solid" 
+                        borderColor="#979797"
+                        boxShadow={'1xl'}
+                        rounded={'md'}
+                        overflow={'hidden'}
+                        padding={1.5}>
                             Dentro do caminhão
                         </Checkbox>
                         </Stack>
@@ -99,7 +132,7 @@ function InserirCodigo() {
                    
                     
                     <Button
-                            w={'800px'}
+                            w={'750px'}
                             mt={8}
                             bg={useColorModeValue('#377C2B', 'green.900')}
                             color={'white'}

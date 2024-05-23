@@ -3,9 +3,9 @@ import Login from './pages/login';
 import Home from './pages/home';
 import Sobre from './pages/sobre';
 import NotFound from './pages/404';
-import Tarefas from './pages/tarefas';
-import Formulario from './pages/formulario';
 import Codigo from './pages/codigo';
+import Etapa1 from './pages/etapa1'
+import Etapa2 from './pages/etapa2'
 import CriarLogin from './pages/criar-login';
 import NovoRelatorio from './pages/novo-relatorio';
 import Formcheck from './pages/checklist';
@@ -18,7 +18,6 @@ import Formcheck7 from './pages/checklist-7';
 import Formcheck8 from './pages/checklist-8';
 import Formcheck9 from './pages/checklist-9';
 
-
 const router = createBrowserRouter([
   { path: '/', element: <Home />, errorElement: <NotFound /> },
   { path: '/sobre', element: <Sobre /> },
@@ -26,6 +25,8 @@ const router = createBrowserRouter([
   { path: '/formulario', element: <Formulario /> }, 
   { path: '/formulario-diferente', element: <Formulario /> }, 
   { path: '/codigo', element: <Codigo /> },
+  { path: '/etapa1', element: <Etapa1 />},
+  { path: '/etapa2', element: <Etapa2 />},
   { path: '/login', element: <Login /> },
   { path: '/criar-login', element: <CriarLogin /> },
   { path: '/novo-relatorio', element: <NovoRelatorio /> },

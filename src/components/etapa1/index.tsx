@@ -199,7 +199,7 @@ function AtribuirEtapas() {
                                 boxShadow: 'lg',
                             }}
                             >
-                            Contro de distribuição
+                            Centro de distribuição
                         </Button>
                         </Stack>
 

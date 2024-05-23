@@ -13,14 +13,11 @@ import CriarLogin from './pages/criar-login'
 const router = createBrowserRouter([
   {path: '/', element: <Home />, errorElement: <NotFound />},
   {path: '/sobre', element: <Sobre />},
-  {path: '/tarefas', element: <Tarefas />},
-  {path: '/formulario', element: <Formulario />},
   {path: '/codigo', element: <Codigo />},
   {path: '/etapa1', element: <Etapa1 />},
-  {path: '/etapa2', element: <Etapa2 />}
-  {path: '/formulario', element: <Formulario />},
-  {path: '/codigo', element: <Codigo />},
+  {path: '/etapa2', element: <Etapa2 />},
   {path: '/login', element: <Login />},
   {path: '/criar-login', element: <CriarLogin />}
+])
 
 export default router

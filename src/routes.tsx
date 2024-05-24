@@ -17,6 +17,10 @@ import Formcheck6 from './pages/checklist-6';
 import Formcheck7 from './pages/checklist-7';
 import Formcheck8 from './pages/checklist-8';
 import Formcheck9 from './pages/checklist-9';
+import Formcheckfim from './pages/checklistfim'
+import Formcheckfimnao from './pages/checklistnao'
+import Formcheckfimsim from './pages/checklistsim'
+import ChecklistStart from './pages/checklistlogo'
 
 const router = createBrowserRouter([
   { path: '/', element: <Home />, errorElement: <NotFound /> },
@@ -38,7 +42,11 @@ const router = createBrowserRouter([
   { path: '/checklist-6', element: <Formcheck6 /> },
   { path: '/checklist-7', element: <Formcheck7 /> },
   { path: '/checklist-8', element: <Formcheck8 /> },
-  { path: '/checklist-9', element: <Formcheck9 /> }
+  { path: '/checklist-9', element: <Formcheck9 /> },
+  { path: '/checklistfim', element: <Formcheckfim />},
+  { path: '/checklistfimnao', element: <Formcheckfimnao />},
+  { path: '/checklistfimsim', element: <Formcheckfimsim />},
+  { path: '/ChecklistStart', element: <ChecklistStart />}
 
 ]);
 

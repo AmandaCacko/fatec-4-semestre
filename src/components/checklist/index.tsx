@@ -10,7 +10,6 @@ import {
 import Input from "../../components/input-login";
 import { ReactNode } from "react";
 
-
 function Formulario() {
     return (
         <Flex padding={10} justifyContent="center">

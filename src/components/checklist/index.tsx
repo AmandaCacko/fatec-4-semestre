@@ -8,7 +8,7 @@ import {
     useColorModeValue,
 } from '@chakra-ui/react';
 import Input from "../../components/input-login";
-
+import { ReactNode } from "react";
 
 function Formulario() {
     return (

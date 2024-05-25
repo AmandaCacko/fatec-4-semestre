@@ -1,6 +1,4 @@
 import Layout from "../../components/layout"
-import Formulario from "../../components/checklist"
-import Card from "../../components/card";
 
 import {
   Heading,
@@ -13,8 +11,9 @@ import {
   Image,
   Center,
 } from '@chakra-ui/react';
-import Input from "../../components/input-login";
+
 import minhaImagem from '/src/img/imagem-612x612.jpg';
+import { Link } from "react-router-dom";
 
 function Formcheck6() {
     return (
@@ -83,7 +82,7 @@ function Formcheck6() {
                     >
                       TIRAR FOTO NOVAMENTE
                     </Button>
-
+                    <Link to={'/checklist-4'} style={{ textDecoration: 'none' }}>
                     <Button
                       bg={useColorModeValue('#377C2B', 'green.900')}
                       color={'white'}
@@ -99,6 +98,7 @@ function Formcheck6() {
                     >
                       CONFIRMAR
                     </Button>
+                    </Link>
                   </Stack>
                 </Box>
               </Flex>

@@ -1,6 +1,5 @@
+import { Link } from "react-router-dom";
 import Layout from "../../components/layout"
-import Formulario from "../../components/checklist"
-import Card from "../../components/card";
 
 import {
   Heading,
@@ -11,7 +10,6 @@ import {
   Button,
   useColorModeValue,
 } from '@chakra-ui/react';
-import Input from "../../components/input-login";
 
 function Formcheck3() {
     return (
@@ -58,6 +56,7 @@ function Formcheck3() {
                   </Stack>
 
                   <Stack spacing={4} align={'center'} mt={4}>
+                  <Link to={'/checklist-6'} style={{ textDecoration: 'none' }}>
                     <Button
                       bg={useColorModeValue('#377C2B', 'green.900')}
                       color={'white'}
@@ -73,7 +72,7 @@ function Formcheck3() {
                     >
                       TIRAR FOTO
                     </Button>
-
+                    </Link>
                     <Button
                       bg={useColorModeValue('#377C2B', 'green.900')}
                       color={'white'}

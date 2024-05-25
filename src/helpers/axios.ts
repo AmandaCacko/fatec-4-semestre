@@ -1,7 +1,7 @@
 import axios from "axios"
 
 const api = axios.create({
-    baseURL: 'https://workshop-node-ts-intro-exemplo1.onrender.com' //trocar link
+    baseURL: 'https://exercicio-api.onrender.com'
 })
 
 export default api

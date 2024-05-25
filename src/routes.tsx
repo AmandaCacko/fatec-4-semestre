@@ -3,6 +3,8 @@ import Login from './pages/login';
 import Home from './pages/home';
 import Sobre from './pages/sobre';
 import NotFound from './pages/404';
+import Tarefas from './pages/tarefas';
+import Formulario from './pages/formulario';
 import Codigo from './pages/codigo';
 import Etapa1 from './pages/etapa1'
 import Etapa2 from './pages/etapa2'
@@ -18,8 +20,6 @@ import Formcheck7 from './pages/checklist-7';
 import Formcheck8 from './pages/checklist-8';
 import Formcheck9 from './pages/checklist-9';
 import Formcheckfim from './pages/checklistfim'
-import Formcheckfimnao from './pages/checklistnao'
-import Formcheckfimsim from './pages/checklistsim'
 import ChecklistStart from './pages/checklistlogo'
 
 const router = createBrowserRouter([
@@ -44,8 +44,6 @@ const router = createBrowserRouter([
   { path: '/checklist-8', element: <Formcheck8 /> },
   { path: '/checklist-9', element: <Formcheck9 /> },
   { path: '/checklistfim', element: <Formcheckfim />},
-  { path: '/checklistfimnao', element: <Formcheckfimnao />},
-  { path: '/checklistfimsim', element: <Formcheckfimsim />},
   { path: '/ChecklistStart', element: <ChecklistStart />}
 
 ]);

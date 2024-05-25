@@ -1,4 +1,3 @@
-import React, { ReactNode } from 'react';
 import {
   IconButton,
   Box,
@@ -6,35 +5,35 @@ import {
   Flex,
   Icon,
   useColorModeValue,
-  Link,
   Drawer,
   DrawerContent,
   Text,
   useDisclosure,
   BoxProps,
   FlexProps,
-  Button,
 } from '@chakra-ui/react';
 import { FiMenu } from 'react-icons/fi';
 import { IconType } from 'react-icons';
-import { ReactText } from 'react';
+import { ReactNode, ReactText } from 'react';
 import { FaAddressCard, FaPlusCircle, FaTruck } from "react-icons/fa";
 import { BsFileEarmarkPlusFill } from 'react-icons/bs';
 import { IoMdHome } from 'react-icons/io';
 import { MdDashboard } from 'react-icons/md';
+import { Link } from 'react-router-dom';
 //import { SiJohndeere } from 'react-icons/si';
 
 interface LinkItemProps {
   name: string;
   icon: IconType;
+  url: string;
 }
 const LinkItems: Array<LinkItemProps> = [
-  { name: 'Home', icon: IoMdHome },
-  { name: 'Criar código', icon: FaPlusCircle },
-  { name: 'Atribuir etapas', icon: FaAddressCard },
-  { name: 'Novo relatório', icon: BsFileEarmarkPlusFill },
-  { name: 'Login temporário', icon: FaTruck },
-  { name: 'Dashboard', icon: MdDashboard },
+  { name: 'Home', icon: IoMdHome, url: '/' },
+  { name: 'Criar código', icon: FaPlusCircle, url: '/codigo' },
+  { name: 'Atribuir etapas', icon: FaAddressCard, url: '/etapa1' },
+  { name: 'Novo relatório', icon: BsFileEarmarkPlusFill, url: '/novo-relatorio' },
+  { name: 'Login temporário', icon: FaTruck, url: '/criar-login' },
+  { name: 'Dashboard', icon: MdDashboard, url: '' },
 ];
 
 
@@ -91,7 +90,7 @@ const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
         </Text>
       </Flex>
       {LinkItems.map((link) => (
-        <NavItem key={link.name} icon={link.icon}>
+        <NavItem key={link.name} icon={link.icon} url={link.url}>
         {link.name}
       </NavItem>
       ))}
@@ -103,10 +102,11 @@ const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
 interface NavItemProps extends FlexProps {
   icon: IconType;
   children: ReactText;
+  url: string;
 }
-const NavItem = ({ icon, children, ...rest }: NavItemProps) => {
+const NavItem = ({ icon, url, children, ...rest }: NavItemProps) => {
   return (
-    <Link href="#" style={{ textDecoration: 'none' }} _focus={{ boxShadow: 'none' }}>
+    <Link to={url} style={{ textDecoration: 'none' }}>
       <Flex
         align="center"
         p="4"

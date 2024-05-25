@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Layout from "../../components/layout"
 import {
   Box,
@@ -48,9 +49,11 @@ function ChecklistStart() {
                 Chegada no caminhão (Cliente)
               </Text>
             </Box>
+            <Link to={'/checklist'} style={{ textDecoration: 'none' }}>
             <Button colorScheme="green" variant="solid" width="full" mb={4}>
               ESTOU PRONTO
             </Button>
+            </Link>
             <Button colorScheme="blackAlpha" variant="solid" width="full">
               SAIR
             </Button>

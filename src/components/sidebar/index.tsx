@@ -28,7 +28,7 @@ interface LinkItemProps {
   url: string;
 }
 const LinkItems: Array<LinkItemProps> = [
-  { name: 'Home', icon: IoMdHome, url: '/' },
+  { name: 'Home', icon: IoMdHome, url: '/home' },
   { name: 'Criar código', icon: FaPlusCircle, url: '/codigo' },
   { name: 'Atribuir etapas', icon: FaAddressCard, url: '/etapa1' },
   { name: 'Novo relatório', icon: BsFileEarmarkPlusFill, url: '/novo-relatorio' },

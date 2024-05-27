@@ -23,7 +23,7 @@ import Formcheckfim from './pages/checklistfim'
 import ChecklistStart from './pages/checklistlogo'
 
 const router = createBrowserRouter([
-  { path: '/', element: <Home />, errorElement: <NotFound /> },
+  { path: '/home', element: <Home />, errorElement: <NotFound /> },
   { path: '/sobre', element: <Sobre /> },
   { path: '/tarefas', element: <Tarefas /> },
   { path: '/formulario', element: <Formulario /> }, 
@@ -31,7 +31,7 @@ const router = createBrowserRouter([
   { path: '/codigo', element: <Codigo /> },
   { path: '/etapa1', element: <Etapa1 />},
   { path: '/etapa2', element: <Etapa2 />},
-  { path: '/login', element: <Login /> },
+  { path: '/', element: <Login /> },
   { path: '/criar-login', element: <CriarLogin /> },
   { path: '/novo-relatorio', element: <NovoRelatorio /> },
   { path: '/checklist', element: <Formcheck /> },

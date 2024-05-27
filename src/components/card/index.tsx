@@ -1,9 +1,6 @@
 import {
     Heading,
-    Avatar,
     Box,
-    Center,
-    Image,
     Flex,
     Text,
     Stack,

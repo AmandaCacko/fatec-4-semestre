@@ -1,8 +1,7 @@
 import Layout from "../../components/layout"
 import Codigo from "../../components/codigo"
-//<img src=""/>
 
-function Home() {
+function CodigoTela() {
     return (
         <Layout>
             <Codigo></Codigo>
@@ -10,4 +9,4 @@ function Home() {
     )
 }
 
-export default Home
+export default CodigoTela

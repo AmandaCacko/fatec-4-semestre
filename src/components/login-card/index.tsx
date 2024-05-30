@@ -15,7 +15,6 @@ const LoginCard: React.FC = () => {
         email: username,
         password: password
       });
-      console.log("Response data:", response.data); // Log the response data for inspection
       localStorage.setItem('token', response.data.token);
       window.location.href = '/home';
     } catch (err) {

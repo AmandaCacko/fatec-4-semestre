@@ -59,7 +59,8 @@ function Codigo() {
     
     
     return (
-        <Flex padding={100}
+        <Flex
+            padding={7}
             bg={useColorModeValue('#CDDECA', 'gray.900')}
             align="center"
             justify="center"

@@ -1,19 +1,9 @@
-import {
-    Box,
-    Button,
-    Flex,
-    FormControl,
-    FormLabel,
-    Input,
-    InputGroup,
-    VStack,
-    useColorModeValue,
-} from '@chakra-ui/react';
+import { Box, Button, Flex, FormControl, FormLabel, Input, InputGroup, VStack, useColorModeValue } from '@chakra-ui/react';
 import { useState } from 'react';
 import api from '../../helpers/axios';
 
 function Codigo() {
-    const [formData, setFormData] = useState({
+ const [formData, setFormData] = useState({
         tipo: '',
         nome: '',
         dataInicio: '',
@@ -21,23 +11,20 @@ function Codigo() {
     });
     const [message, setMessage] = useState('');
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
         const { name, value } = e.target;
         setFormData({ ...formData, [name]: value });
-    };
+    }
     
-    const handleSubmit = async () => {
+    async function handleSubmit() {
+        const token = localStorage.getItem('token');
+        if (!token) {
+            setMessage('Token não encontrado. Por favor, faça login novamente.');
+            return;
+        }
+
         try {
-            const token = localStorage.getItem('token');
-            if (!token) {
-                throw new Error('Token de autenticação não encontrado');
-            }
-    
-            const response = await api.post('/codigo', formData, {
-                headers: {
-                    Authorization: `Bearer ${token}` // Ensure the token is prefixed with 'Bearer '
-                }
-            });
+            await api().post('/codigo', formData);
             setMessage('Processo criado com sucesso!');
             setFormData({
                 tipo: '',
@@ -45,36 +32,31 @@ function Codigo() {
                 dataInicio: '',
                 dataFim: ''
             });
-        } catch (error: any) {
-            console.error('Erro ao criar processo:', error);
-            if (error.response && error.response.data && error.response.data.error === 'Token inválido') {
-                setMessage('Sua sessão expirou. Por favor, faça login novamente.');
-            } else if (error.response && error.response.data && error.response.data.error) {
-                setMessage(`Erro ao criar processo: ${error.response.data.error}`);
-            } else {
-                setMessage('Erro desconhecido ao criar processo');
-            }
+        } catch (error) {
+            console.error('Erro ao criar processo', error);
+            setMessage('Erro ao criar processo. Por favor, tente novamente.');
         }
-    };
+    }
     
     
+
     return (
         <Flex
             padding={7}
             bg={useColorModeValue('#CDDECA', 'gray.900')}
             align="center"
             justify="center"
-            id="contact">
+            id="contact"
+        >
             <Box
                 bg={useColorModeValue('white', 'gray.700')}
                 borderRadius="lg"
                 p={20}
                 color={useColorModeValue('gray.700', 'whiteAlpha.900')}
-                shadow="base">
+                shadow="base"
+            >
                 <VStack spacing={5}>
-                    {message && (
-                        <p>{message}</p>
-                    )}
+                    {message && <p>{message}</p>}
                     <FormControl isRequired>
                         <FormLabel>Tipo de equipamento</FormLabel>
                         <InputGroup>
@@ -124,7 +106,7 @@ function Codigo() {
                             />
                         </InputGroup>
                     </FormControl>
-                    <Button 
+                    <Button
                         colorScheme="blue"
                         bg="#377C2B"
                         color="white"

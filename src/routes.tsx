@@ -44,7 +44,7 @@ const router = createBrowserRouter([
   { path: '/checklist-8', element: <Formcheck8 /> },
   { path: '/checklist-9', element: <Formcheck9 /> },
   { path: '/checklistfim', element: <Formcheckfim />},
-  { path: '/ChecklistStart', element: <ChecklistStart />}
+  { path: '/checklistStart', element: <ChecklistStart />}
 
 ]);
 

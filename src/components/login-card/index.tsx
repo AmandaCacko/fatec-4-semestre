@@ -11,7 +11,7 @@ const LoginCard: React.FC = () => {
 
   const handleLogin = async () => {
     try {
-      const response = await api.post('/auth/login/', {
+      const response = await api().post('/auth/login/', {
         email: username,
         password: password
       });

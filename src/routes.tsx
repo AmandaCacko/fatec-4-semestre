@@ -7,7 +7,6 @@ import Tarefas from './pages/tarefas';
 import Formulario from './pages/formulario';
 import Codigo from './pages/codigo';
 import Etapa1 from './pages/etapa1'
-import Etapa2 from './pages/etapa2'
 import CriarLogin from './pages/criar-login';
 import NovoRelatorio from './pages/novo-relatorio';
 import Formcheck from './pages/checklist';
@@ -30,7 +29,6 @@ const router = createBrowserRouter([
   { path: '/formulario-diferente', element: <Formulario /> }, 
   { path: '/codigo', element: <Codigo /> },
   { path: '/etapa1', element: <Etapa1 />},
-  { path: '/etapa2', element: <Etapa2 />},
   { path: '/', element: <Login /> },
   { path: '/criar-login', element: <CriarLogin /> },
   { path: '/novo-relatorio', element: <NovoRelatorio /> },

@@ -32,7 +32,7 @@ const LinkItems: Array<LinkItemProps> = [
   { name: 'Criar código', icon: FaPlusCircle, url: '/codigo' },
   { name: 'Atribuir etapas', icon: FaAddressCard, url: '/etapa1' },
   { name: 'Novo relatório', icon: BsFileEarmarkPlusFill, url: '/novo-relatorio' },
-  { name: 'Login temporário', icon: FaTruck, url: '/criar-login' },
+  //{ name: 'Login temporário', icon: FaTruck, url: '/criar-login' },
   { name: 'Dashboard', icon: MdDashboard, url: '' },
 ];
 
@@ -80,13 +80,13 @@ const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
       pos="fixed"
       h="full"
       {...rest}>
-      <Flex h="20" alignItems="center" mx="8" justifyContent="space-between" marginTop='5'>
+      <Flex h="20" alignItems="center" mx="5" justifyContent="space-between" marginTop='5'>
         <img src="https://logowik.com/content/uploads/images/john-deere-black1498.jpg"></img>
         <CloseButton display={{ base: 'flex', md: 'none' }} onClick={onClose} />
       </Flex>
-      <Flex h="20" alignItems="center" mx="8" justifyContent="space-between">
-        <Text fontSize="2xl" fontFamily="monospace" fontWeight="bold">
-          Seja bem-vindo, User!
+      <Flex h="20" alignItems="center" mx="5" justifyContent="space-between">
+        <Text fontSize="2xl" fontFamily="monospace" fontWeight="bold" whiteSpace="nowrap">
+          Seja bem-vindo!
         </Text>
       </Flex>
       {LinkItems.map((link) => (

@@ -42,16 +42,16 @@ function Card() {
 
     return (
       <Flex padding={5}>
-        {data.slice(0, 4).map((item, index) => (
+        {data.slice(0, 3).map((item, index) => (
           <Box
-            key={index} // Adicione uma chave única para cada elemento renderizado
+            key={index}
             maxW={'270px'}
             w={'full'}
             bg={useColorModeValue('white', 'gray.800')}
             boxShadow={'2xl'}
             rounded={'24'}
             overflow={'hidden'}
-            mb={5} // Adicione margem inferior para separar os cards
+            mx={5}
           >
             <Box p={6}>
               <Stack spacing={0} align={'center'} mb={5}>

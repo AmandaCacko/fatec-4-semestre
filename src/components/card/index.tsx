@@ -11,6 +11,7 @@ import {
 
 import api from '../../helpers/axios'
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 
 interface ProcessData {
     codigoProcesso: number
@@ -40,60 +41,65 @@ function Card() {
     }
 
     return (
-        <Flex padding={5}>
-         {data.slice(0, 3).map((item) => (
-        <Box
-          maxW={'270px'}
-          w={'full'}
-          bg={useColorModeValue('white', 'gray.800')}
-          boxShadow={'2xl'}
-          rounded={'24'}
-          overflow={'hidden'}>
+      <Flex padding={5}>
+        {data.slice(0, 4).map((item, index) => (
+          <Box
+            key={index} // Adicione uma chave única para cada elemento renderizado
+            maxW={'270px'}
+            w={'full'}
+            bg={useColorModeValue('white', 'gray.800')}
+            boxShadow={'2xl'}
+            rounded={'24'}
+            overflow={'hidden'}
+            mb={5} // Adicione margem inferior para separar os cards
+          >
+            <Box p={6}>
+              <Stack spacing={0} align={'center'} mb={5}>
+                <Heading fontSize={'2xl'} fontWeight={500} fontFamily={'body'}>
+                  Código do processo
+                </Heading>
+                <Text color={'gray.500'}>{item.codigoProcesso}</Text>
+              </Stack>
   
-          <Box p={6}>
-            <Stack spacing={0} align={'center'} mb={5}>
-              <Heading fontSize={'2xl'} fontWeight={500} fontFamily={'body'}>
-                Código do processo
-              </Heading>
-              <Text color={'gray.500'}>{item.codigoProcesso}</Text>
-            </Stack>
+              <Stack spacing={0} align={'center'} mb={5}>
+                <Heading fontSize={'2xl'} fontWeight={500} fontFamily={'body'}>
+                  Responsável
+                </Heading>
+                <Text color={'gray.500'}>{item.responsavel}</Text>
+              </Stack>
   
-            <Stack spacing={0} align={'center'} mb={5}>
-              <Heading fontSize={'2xl'} fontWeight={500} fontFamily={'body'}>
-                Responsável
-              </Heading>
-              <Text color={'gray.500'}>{item.responsavel}</Text>
-            </Stack>
+              <Stack spacing={0} align={'center'} mb={5}>
+                <Heading fontSize={'2xl'} fontWeight={500} fontFamily={'body'}>
+                  Etapa a ser realizada:
+                </Heading>
+                <Text color={'gray.500'}>{item.etapa}</Text>
+              </Stack>
   
-            <Stack spacing={0} align={'center'} mb={5}>
-              <Heading fontSize={'2xl'} fontWeight={500} fontFamily={'body'}>
-                Etapa a ser realizada:
-              </Heading>
-              <Text color={'gray.500'}>{item.etapa}</Text>
-            </Stack>
+              <Stack spacing={0} align={'center'} mb={5}>
+                <Heading fontSize={'2xl'} fontWeight={500} fontFamily={'body'}>
+                  Progresso atual: {item.progresso*10}%
+                  <Progress marginTop={2} rounded={7} value={item.progresso*10} />
+                </Heading>
+              </Stack>
   
-            <Stack spacing={0} align={'center'} mb={5}>
-              <Heading fontSize={'2xl'} fontWeight={500} fontFamily={'body'}>
-                Progresso atual: {item.progresso}%
-                <Progress marginTop={2} rounded={7} value={item.progresso} />
-              </Heading>
-            </Stack>
-  
-            <Button
-              w={'full'}
-              mt={8}
-              bg={useColorModeValue('#377C2B', 'green.900')}
-              color={'white'}
-              rounded={'md'}
-              _hover={{
-                transform: 'translateY(-2px)',
-                boxShadow: 'lg',
-              }}>
-              Acessar
-            </Button>
+              <Link to={`/checklist-${item.progresso}`}>
+                <Button
+                  w={'full'}
+                  mt={8}
+                  bg={useColorModeValue('#377C2B', 'green.900')}
+                  color={'white'}
+                  rounded={'md'}
+                  _hover={{
+                    transform: 'translateY(-2px)',
+                    boxShadow: 'lg',
+                  }}
+                >
+                  Acessar Checklist
+                </Button>
+              </Link>
+            </Box>
           </Box>
-        </Box>
-         ))}
+        ))}
       </Flex>
     )
   }

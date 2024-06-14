@@ -6,7 +6,7 @@ function Home() {
     return (
         <Layout>
             <Flex>
-                <><Card></Card><Card></Card><Card></Card></>
+                <Card></Card>
             </Flex>
         </Layout>
     );

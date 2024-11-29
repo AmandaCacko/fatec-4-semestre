@@ -18,7 +18,7 @@ import { ReactNode, ReactText } from 'react';
 import { FaAddressCard, FaPlusCircle, FaTruck } from "react-icons/fa";
 import { BsFileEarmarkPlusFill } from 'react-icons/bs';
 import { IoMdHome } from 'react-icons/io';
-import { MdDashboard } from 'react-icons/md';
+//import { MdDashboard } from 'react-icons/md';
 import { Link } from 'react-router-dom';
 //import { SiJohndeere } from 'react-icons/si';
 
@@ -33,7 +33,7 @@ const LinkItems: Array<LinkItemProps> = [
   { name: 'Atribuir etapas', icon: FaAddressCard, url: '/etapa1' },
   { name: 'Novo relatório', icon: BsFileEarmarkPlusFill, url: '/novo-relatorio' },
   //{ name: 'Login temporário', icon: FaTruck, url: '/criar-login' },
-  { name: 'Dashboard', icon: MdDashboard, url: '' },
+  //{ name: 'Dashboard', icon: MdDashboard, url: '' },
 ];
 
 
